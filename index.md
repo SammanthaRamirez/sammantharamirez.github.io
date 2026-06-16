@@ -51,3 +51,5 @@ I love turning messy data into clean insights.
 
 ### © 2026 YOUR NAME
 
+[Go to Page 2](page2.md)
+
