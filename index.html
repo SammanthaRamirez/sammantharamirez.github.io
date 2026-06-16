@@ -53,6 +53,12 @@
       transform: translateY(-2px);
     }
 
+    /* ⭐ Highlight active section */
+    .sidebar a.active {
+      color: #4da3ff;
+      font-weight: 700;
+    }
+
     /* ⭐ Content wrapper */
     .content {
       margin-left: 180px;
@@ -205,6 +211,30 @@
   </section>
 
   </div> <!-- END CONTENT WRAPPER -->
+
+  <!-- ⭐ Scroll‑Spy Script -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".sidebar a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
