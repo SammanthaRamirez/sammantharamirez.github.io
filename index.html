@@ -1,6 +1,5 @@
 <h1 style="color:red;">TESTING</h1>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,28 +14,49 @@
       scroll-behavior: smooth;
     }
 
-    nav {
-      background: #222;
-      padding: 15px;
+    /* 🔥 NEW — Vertical sidebar */
+    .sidebar {
       position: fixed;
       top: 0;
-      width: 100%;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      background: #222;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       z-index: 1000;
     }
 
-    nav a {
+    .sidebar a {
       color: white;
-      margin-right: 20px;
       text-decoration: none;
       font-weight: bold;
+      margin: 25px 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
+    .sidebar a i {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    /* 🔥 NEW — Push content to the right */
+    .content {
+      margin-left: 200px;
+      padding: 40px;
+    }
+
+    /* ORIGINAL CODE BELOW — unchanged */
     section {
       padding: 80px 20px;
       min-height: 100vh;
     }
 
-    /* Portfolio grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -58,13 +78,34 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- 🔥 NEW — ICON LIBRARY -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 🔥 NEW — VERTICAL SIDEBAR -->
+  <div class="sidebar">
+    <a href="#home">
+      <i class="fas fa-house"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="#portfolio">
+      <i class="fas fa-briefcase"></i>
+      <span>Portfolio</span>
+    </a>
+
+    <a href="#about">
+      <i class="fas fa-user"></i>
+      <span>About</span>
+    </a>
+
+    <a href="#contact">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <!-- 🔥 NEW — WRAP ALL CONTENT -->
+  <div class="content">
 
   <!-- HOME SECTION -->
   <section id="home">
@@ -110,6 +151,8 @@
     <h2>Contact</h2>
     <p>Email: you@example.com</p>
   </section>
+
+  </div> <!-- END CONTENT WRAPPER -->
 
 </body>
 </html>
