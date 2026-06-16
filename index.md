@@ -1,3 +1,53 @@
+<style>
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  text-decoration: none;
+  color: #0366d6;
+  font-weight: bold;
+}
+</style>
+
+<div class="card-container">
+
+  <div class="card">
+    <h3>Page 1</h3>
+    <p>Learn more about topic 1.</p>
+    <a href="page1.md">Open Page</a>
+  </div>
+
+  <div class="card">
+    <h3>Page 2</h3>
+    <p>Explore topic 2.</p>
+    <a href="page2.md">Open Page</a>
+  </div>
+
+  <div class="card">
+    <h3>Page 3</h3>
+    <p>Visit topic 3.</p>
+    <a href="page3.md">Open Page</a>
+  </div>
+
+</div>
+
+
 # 👋 Hi, I'm YOUR NAME  
 ### Data Analyst • SQL Developer • Portfolio Builder
 
