@@ -122,6 +122,55 @@
       color: #4da3ff;
       text-decoration: none;
     }
+
+    /* ⭐ Modern Contact Form */
+    .contact-form {
+      max-width: 500px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: #4da3ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background: #1e90ff;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 
@@ -207,10 +256,27 @@
     <p>Write your bio here.</p>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- ⭐ UPDATED CONTACT SECTION WITH FORM -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: you@example.com</p>
+    <p>Have a question or want to work together? Send me a message.</p>
+
+    <form class="contact-form" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+      <!-- Prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+    </form>
   </section>
 
   </div> <!-- END CONTENT WRAPPER -->
